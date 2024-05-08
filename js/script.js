@@ -6,6 +6,7 @@ document.getElementById("form").addEventListener("submit", function (event) {
   const lastName = document.getElementById("last-name").value;
   const address = document.getElementById("address").value;
   const pincode = document.getElementById("pincode").value;
+  const email = document.getElementById("email").value;
 
   if (pincode.length !== 6) {
     alert("Please enter a valid pincode");
@@ -38,23 +39,26 @@ document.getElementById("form").addEventListener("submit", function (event) {
   const td6 = document.createElement("td");
   const td7 = document.createElement("td");
   const td8 = document.createElement("td");
+  const td9 = document.createElement("td");
 
   td1.innerHTML = firstName;
   td2.innerHTML = lastName;
-  td3.innerHTML = address;
-  td4.innerHTML = pincode;
-  td5.innerHTML = gender;
-  td6.innerHTML = food1 + ", " + food2;
-  td7.innerHTML = state;
-  td8.innerHTML = country;
+  td3.innerHTML = email;
+  td4.innerHTML = address;
+  td5.innerHTML = pincode;
+  td6.innerHTML = gender;
+  td7.innerHTML = food1 + ", " + food2;
+  td8.innerHTML = state;
+  td9.innerHTML = country;
 
-  row.append(td1, td2, td3, td4, td5, td6, td7, td8);
+  row.append(td1, td2, td3, td4, td5, td6, td7, td8, td9);
 
   tbody.appendChild(row);
 
   document.getElementById("first-name").value = "";
   document.getElementById("last-name").value = "";
   document.getElementById("address").value = "";
+  document.getElementById("email").value = "";
   document.getElementById("pincode").value = "";
   document.getElementById("gender").value = "";
   document.querySelector('input[name="food1"]:checked').value = "";
